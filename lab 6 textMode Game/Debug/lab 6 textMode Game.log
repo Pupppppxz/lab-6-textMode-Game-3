@@ -1,0 +1,7 @@
+﻿  Source.cpp
+C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\lab 6 textMode Game\Source.cpp(22,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\lab 6 textMode Game\Source.cpp(139,17): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\lab 6 textMode Game\Source.cpp(139,21): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\lab 6 textMode Game\Source.cpp(205,30): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\lab 6 textMode Game\Source.cpp(205,32): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+  lab 6 textMode Game.vcxproj -> C:\Users\Asarawoot114\source\repos\lab 6 textMode Game\Debug\lab 6 textMode Game.exe

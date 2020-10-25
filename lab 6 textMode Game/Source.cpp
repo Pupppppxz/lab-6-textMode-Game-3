@@ -10,11 +10,11 @@ void set_color(int, int);
 void set_cursor(bool);
 void draw_bullet(int, int);
 void bullet_ship(int, int);
-void draw_star(int x, int y);
-void erase_bullet(int x, int y);
-char cursor(int x, int y);
-void draw_score(int x, int y);
-void erase_star(int x, int y);
+void draw_star(int , int );
+void erase_bullet(int , int );
+char cursor(int , int );
+void draw_score(int , int, int);
+void erase_star(int , int );
 
 int main()
 {
@@ -46,7 +46,7 @@ int main()
     }
 
     do {
-        draw_score(x, y);
+        draw_score(x, y, score);
         if (_kbhit()) {
             ch = _getch();
             if (ch == 'w')
@@ -72,7 +72,7 @@ int main()
                     if (bullet[i] == 0)
                     {
                         bullet[i] = 1;
-                        bullet_x[i] = x;
+                        bullet_x[i] = x + 2;
                         bullet_y[i] = y - 2;
                         draw_bullet(bullet_x[i], bullet_y[i]);
                         break;
@@ -84,7 +84,7 @@ int main()
             fflush(stdin);
 
         }
-        if (movee[0] == 1)
+        if (movee[0] == 1 && x > 0)
         {
             erase_ship(x, y), draw_ship(x, y);
         }
@@ -118,7 +118,7 @@ int main()
                     }
                     else
                     {
-                        erase_bullet(bullet_x[i], bullet_y[i]);
+                        draw_bullet(bullet_x[i], --bullet_y[i]);
                     }
                 }
                 else
@@ -167,7 +167,7 @@ void draw_bullet(int x, int y)
 {
     set_color(1, 0);
     gotoxy(x, y);
-    printf(" < ^ > ");
+    printf("^");
 
 }
 void bullet_ship(int x, int y)
@@ -188,7 +188,7 @@ void erase_star(int x, int y)
     gotoxy(x, y);
     printf(" ");
 }
-void draw_score(int x, int y)
+void draw_score(int x, int y, int score)
 {
     set_color(12, 15);
     gotoxy(105, 1);
